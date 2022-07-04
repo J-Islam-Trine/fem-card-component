@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body
+{
+    background-color: #f2e8e1;
+}
+
+.card-container
+{
+    background-color: white;
+    height: 80vh;
+    width: 50vw;
+    margin: 0 auto;
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+    overflow: hidden; /*solves the issue with child elem not taking radius*/
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 15px;
+}
+
+
+
+#product-image
+{
+    max-height: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    filter: brightness(.7);
+}
+
+
+
+.text 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+    text-align: left;
+    min-height: 100%;
+}
+
+#category-name
+{
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-size: small;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+#product-name, .prices 
+{
+    font-family: 'Fraunces', serif;
+}
+
+#product-name 
+{
+
+    text-align: left;
+}
+
+#description
+{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 2rem;
+    text-align: left;
+    text-justify: distribute;
+}
+
+.prices
+{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+#new-price
+{
+    font-size: xx-large
+}
+
+#og-price 
+{
+    text-decoration: line-through;
+}
+
+.CTA
+{
+    display: flex;
+    justify-content: center;
+}
+
+#add-to-cart
+{
+    padding: 1rem;
+    width: 100%;
+    background-color: #244d3e;
+    border-style: none;
+    color: white;
+    font-size: medium;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.button-text
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+#add-to-cart:hover 
+{
+ background-color: #1a4031;
+}
+
+#new-price
+{
+    color: hsl(158, 36%, 37%);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media (max-width: 480px)
+  {
+       .card-container
+       {
+        width: auto;
+        height: auto;
+        margin: 2rem 1rem;
+        display: grid;
+       grid-template-columns: auto;
+        grid-template-rows: 40vh auto;
+       }
+    
+       #product-image
+       {
+        width: 100%;
+        object-fit: cover;
+       }
+
+       .text
+       {
+        padding: 1rem 1rem;
+        gap: 1rem;
+       }
+       
+
+      
+}
